@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.bwzhou.entity">
+    <class name="Street" table="street" catalog="lethouse">
+        <!-- <meta attribute="class-description">
+             This class contains the house detail.
+         </meta>-->
+        <!-- class下必须要有一个id的子元素 -->
+        <!-- id是用于描述主键的 -->
+        <id name="id" column="ID">
+            <!-- 主键生成策略 -->
+            <generator class="identity"></generator>
+        </id>
+        <!--
+            使用property来描述属性与字段的对应关系
+            如果length忽略不写，且你的表是自动创建这种方案，那么length的默认长度是255
+        -->
+        <property name="name" column="NAME" ></property>
+        <property name="districtId" column="DISTRICT_ID" ></property>
+
+    </class>
+</hibernate-mapping>
