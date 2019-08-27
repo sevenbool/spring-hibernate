@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-
 public class StreetRepository {
     @Resource
     private SessionFactory sessionFactory;
